@@ -1,0 +1,18 @@
+* Obsidian-Roam
+The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in beta currently
+** TODO
+- [] Org-Roam
+  - Provides the note linking
+- [] Org-Roam-Graph?
+  - Provides the graph
+  - Might make optimal looks like a beast to configure
+- [] Tree-view
+  - Need a file tree
+- [] Markdown
+  - Allow for the user to use markdown
+- [] Better-Bullets
+  - More bullet points
+- [] Obsidan-esque default theme
+
+
+
