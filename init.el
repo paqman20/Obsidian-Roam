@@ -17,6 +17,25 @@
 ;; Stop the original startup screen 
 (setq inhibit-startup-screen t)
 
+;; The Star of the show. Org and Org-Roam 
+;; Org-Roam is extremely powerful and it can do pretty much everything Obsidian can do. It provides the same type of file linking. There are certainly a couple differences but overall
+;; The expreince is good in both of them
+(use-package org
+  :ensure t
+;  :bind (("C-c l" . org-store-link)
+   )
+
+(use-package org-roam
+  :ensure t
+  :bind
+  ("C-c n l" . org-roam-buffer-toggle)
+  ("C-c n f" . org-roam-node-find)
+  ("C-c n i" . org-roam-node-insert)
+  (:map org-mode-map
+        (("C-c n i" . org-roam-node-insert)))
+  :config
+  (setq org-roam-capture-templates `(("d" "default" plain "%?" :target (file+head "${slug}.org" "#+title: ${title}"):unnarrowed t))) 
+  )
 ;; Treemacs
 ;; A use package declaration this is going to help us autmatically set everything up. Use-Package is pretty sweet.
 ;; Like I stated in the README. There are alot of things here I dont need. Things like magit however im going to still be including it
@@ -133,12 +152,17 @@
   :ensure t
   :config (treemacs-set-scope-type 'Tabs))
 
+;; Automatically start treemacs on startup
+(treemacs)
 
 
-;; This may be very controversial for people who use emacs on a daily but I am choosing to leave the tool, scroll, and menu bar there.
+
+
+
+;; This may be very controversial for people who use emacs on a daily but I am choosing to leave the menu bar there.
 ;; Many people including myself prefer to turn these off. Feel free to uncomment the lines bellow if you want them disabled
 ;; (menu-bar-mode -1) 
-;; (tool-bar-mode -1) 
-;; (scroll-bar-mode -1)
+(tool-bar-mode -1) 
+(scroll-bar-mode -1)
 
 ;;

@@ -10,15 +10,19 @@ This is not supposed to be my personal emacs configuration. It is meant to be a 
 - Line wrapping automatically enabled for org files
 - Flyspell automatically enabled for org files
 ** Packages
+*** Org Mode
+This is one of emacs most defining features. There is a great many features that in org mode it would be impossible to cover here. It has a lot of features it can be found here at their [[https://orgmode.org/][website]]. I also really recomend System Crafter's youtube [[https://www.youtube.com/watch?v=VcgjTEa0kU4&t=734s][video]] about org mode. He is super helpful and was one of the reasons I was able to get into Emacs at all. 
+*** Org-Roam
+The crown jewel, this is the program that is going to make emacs more like Obsidian. This is the package that is going to give up the linking between notes. I have added a few key binds to make this a little easier for new people. C-c n i, will insert a link onto the page. This will link the file. To be honest I have been using org-roam for such a small time it is difficult for me to guide new users. I high recommend looking at there [[https://www.orgroam.com/manual.html][documentation]] as with most things emacs it is very well documented. The only real change to the configuration of org-roam is that I decided to stop org-roam from inserting the date in front of your filename. In my opinion it looks bad and is unnecessary. This can of course always be disabled by commenting or deleting the :config section in use-package for org-roam.
 *** Treemacs
 [[https://github.com/Alexander-Miller/treemacs][TreeMacs]] is meant to provide the file-tree on the left hand side. This project is idea because it adds mouse support. This is important to new users who aren't yet ready to move to a to a total key bind interface. This project is mainly for product management, however it will perfect for this role
 ** TODO
-- [ ] Org-Roam
+- [x ] Org-Roam
   - Provides the note linking
 - [ ] Org-Roam-Graph?
   - Provides the graph
   - Might make optimal looks like a beast to configure
-- [ ] Tree-view
+- [x] Tree-view
   - Need a file tree
 - [ ] Markdown
   - Allow for the user to use markdown
