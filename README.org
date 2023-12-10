@@ -1,18 +1,29 @@
 * Obsidian-Roam
-The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in beta currently
+The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in very early development.
+** Considerations
+This is not supposed to be my personal emacs configuration. It is meant to be a template others can use if they want to use emacs from Obsidian. However, Emacs has some quirks and some beginner-unfriendly stuff. I have to balance the consideration of further deviating from vanilla emacs with things like custom key binds, commands, etc or potentially adding beginner friendly features that could help someone. Everything that deviates from base emacs will be in a bullet list below. If you want to change it back to default look at the init.el it will be there. 
+
+- Y or N instead of Yes or No for the minibuffer
+- Org-Roam key binds
+  - 
+- Line wrapping automatically enabled for org files
+- Flyspell automatically enabled for org files 
 ** TODO
-- [] Org-Roam
+- [ ] Org-Roam
   - Provides the note linking
-- [] Org-Roam-Graph?
+- [ ] Org-Roam-Graph?
   - Provides the graph
   - Might make optimal looks like a beast to configure
-- [] Tree-view
+- [ ] Tree-view
   - Need a file tree
-- [] Markdown
+- [ ] Markdown
   - Allow for the user to use markdown
-- [] Better-Bullets
+- [ ] Better-Bullets
   - More bullet points
-- [] Obsidan-esque default theme
+- [ ] Obsidan-esque default theme
+- [ ] Flyspell
+  - Spellcheck 
+  
 
 
 
