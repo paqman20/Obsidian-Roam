@@ -1,8 +1,24 @@
 
 * Obsidian-Roam
-The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in very early development.
+The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in very early development. Some of its features are a file tree provided with the package treemacs, org-roam for linking, basic Markdown support, and a obsidian esque default theme.
+
+This is not a vanilla emacs expreince it has been enhanced by some packages as well as custom configuration and what I consider to be better defaults. Anything and everything in this configuration is optional. Feel free to change anything you like, add new things, or anything else that would suit your specific workflow. This project relies extensively on  [[https://github.com/jwiegley/use-package][use-package]]. It provides a neat and tidy way for all the package specific configuration to go. If you want to add or change anything specific about the configuration you just have to find where the use-package deceleration is. It will look something like
+#+begin_src emacs-lisp
+(use-package org-roam
+  :ensure t
+  :bind
+  ("C-c n l" . org-roam-buffer-toggle)
+  ("C-c n f" . org-roam-node-find)
+  ("C-c n i" . org-roam-node-insert)
+  (:map org-mode-map
+        (("C-c n i" . org-roam-node-insert)))
+  :config
+  (setq org-roam-capture-templates `(("d" "default" plain "%?" :target (file+head "${slug}.org" "#+title: ${title}"):unnarrowed t))) 
+  )
+#+end_src
+This is the configuration for org-roam.
 ** Considerations
-This is not supposed to be my personal emacs configuration. It is meant to be a template others can use if they want to use emacs from Obsidian. However, Emacs has some quirks and some beginner-unfriendly stuff. I have to balance the consideration of further deviating from vanilla emacs with things like custom key binds, commands, etc or potentially adding beginner friendly features that could help someone. Everything that deviates from base emacs will be in a bullet list below. If you want to change it back to default look at the init.el it will be there. 
+This is not my personal emacs configuration. It is meant to be a template others can use if they want to transition to emacs from Obsidian. However, Emacs has some quirks and some beginner-unfriendly stuff. I have to balance the consideration of further deviating from vanilla emacs with things like custom key binds, commands, etc or potentially adding beginner friendly features that could help someone. Everything that deviates from base emacs will be in a bullet list below. If you want to change it back to default look at the init.el it will be there. 
 
 - Y or N instead of Yes or No for the minibuffer
 - Org-Roam key binds
@@ -11,7 +27,7 @@ This is not supposed to be my personal emacs configuration. It is meant to be a 
 - Flyspell automatically enabled for org files
 ** Packages
 *** Org Mode
-This is one of emacs most defining features. There is a great many features that in org mode it would be impossible to cover here. It has a lot of features it can be found here at their [[https://orgmode.org/][website]]. I also really recomend System Crafter's youtube [[https://www.youtube.com/watch?v=VcgjTEa0kU4&t=734s][video]] about org mode. He is super helpful and was one of the reasons I was able to get into Emacs at all. 
+This is one of emacs most defining features. There is a great many features that in org mode it would be impossible to cover here. It has a lot of features it can be found here at their [[https://orgmode.org/][website]]. I also really recommend System Crafter's youtube [[https://www.youtube.com/watch?v=VcgjTEa0kU4&t=734s][video]] about org mode. He is super helpful and was one of the reasons I was able to get into Emacs at all. 
 *** Org-Roam
 The crown jewel, this is the program that is going to make emacs more like Obsidian. This is the package that is going to give up the linking between notes. I have added a few key binds to make this a little easier for new people. C-c n i, will insert a link onto the page. This will link the file. To be honest I have been using org-roam for such a small time it is difficult for me to guide new users. I high recommend looking at there [[https://www.orgroam.com/manual.html][documentation]] as with most things emacs it is very well documented. The only real change to the configuration of org-roam is that I decided to stop org-roam from inserting the date in front of your filename. In my opinion it looks bad and is unnecessary. This can of course always be disabled by commenting or deleting the :config section in use-package for org-roam.
 *** Treemacs
