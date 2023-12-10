@@ -17,6 +17,9 @@
 ;; Stop the original startup screen 
 (setq inhibit-startup-screen t)
 
+;; Packages 
+;; ------------------------------------------------------------------------------------------------------------
+
 ;; The Star of the show. Org and Org-Roam 
 ;; Org-Roam is extremely powerful and it can do pretty much everything Obsidian can do. It provides the same type of file linking. There are certainly a couple differences but overall
 ;; The expreince is good in both of them
@@ -155,9 +158,24 @@
 ;; Automatically start treemacs on startup
 (treemacs)
 
+;; Markdown
+;; This is the package that will allow you to continue using markdown. In my opinion I reccomend learning org bu this will let you migrate your notes. 
+(use-package markdown-mode
+  :ensure t
+  :mode ("README\\.md\\'" . gfm-mode)
+  :init (setq markdown-command "multimarkdown")
+  :bind (:map markdown-mode-map
+         ("C-c C-e" . markdown-do)))
+(require 'markdown-mode)
 
+;; Adding obsidian colors to the headings
+(custom-set-faces
+  '(markdown-header-face-1 ((t (:foreground "blue")))) ; Change 'blue' to your desired color
+  '(markdown-header-face-2 ((t (:foreground "green")))) ; Change 'green' to your desired color
+  ;; Add more lines for other levels if needed
+  )
 
-
+;;-------------------------------------------------------------------------------------------------------------
 
 ;; This may be very controversial for people who use emacs on a daily but I am choosing to leave the menu bar there.
 ;; Many people including myself prefer to turn these off. Feel free to uncomment the lines bellow if you want them disabled

@@ -16,7 +16,11 @@ This is not a vanilla emacs expreince it has been enhanced by some packages as w
   (setq org-roam-capture-templates `(("d" "default" plain "%?" :target (file+head "${slug}.org" "#+title: ${title}"):unnarrowed t))) 
   )
 #+end_src
-This is the configuration for org-roam.
+This is the configuration for org-roam. The rest of the configurations follow essentially the same format. Many have been provided by the packages themselves. This project focus on
+** Goals
+- Good out of the box experience 
+- Repeatability
+- Stability
 ** Considerations
 This is not my personal emacs configuration. It is meant to be a template others can use if they want to transition to emacs from Obsidian. However, Emacs has some quirks and some beginner-unfriendly stuff. I have to balance the consideration of further deviating from vanilla emacs with things like custom key binds, commands, etc or potentially adding beginner friendly features that could help someone. Everything that deviates from base emacs will be in a bullet list below. If you want to change it back to default look at the init.el it will be there. 
 
