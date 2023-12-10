@@ -1,3 +1,4 @@
+
 * Obsidian-Roam
 The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in very early development.
 ** Considerations
@@ -7,7 +8,10 @@ This is not supposed to be my personal emacs configuration. It is meant to be a 
 - Org-Roam key binds
   - 
 - Line wrapping automatically enabled for org files
-- Flyspell automatically enabled for org files 
+- Flyspell automatically enabled for org files
+** Packages
+*** Treemacs
+[[https://github.com/Alexander-Miller/treemacs][TreeMacs]] is meant to provide the file-tree on the left hand side. This project is idea because it adds mouse support. This is important to new users who aren't yet ready to move to a to a total key bind interface. This project is mainly for product management, however it will perfect for this role
 ** TODO
 - [ ] Org-Roam
   - Provides the note linking
