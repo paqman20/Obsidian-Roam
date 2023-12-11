@@ -1,8 +1,8 @@
 
 * Obsidian-Roam
-The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in very early development. Some of its features are a file tree provided with the package treemacs, org-roam for linking, basic Markdown support, and a obsidian esque default theme.
+The overall goal of the project is to have a Obsidian like approach to note taking. I really enjoyed using the Obsidian software. I want a similar expreince inside emacs. Emacs is awesome free software and integrates super tightly with a massive expanse of packages and extensions. The goal is provide as much of a out of the box expreince for emacs as possible that resembles Obsidian. The project is in very early development. Some of its features are a file tree provided with the package Treemacs, org-roam for linking, basic Markdown support, and a obsidian esque default theme.
 
-This is not a vanilla emacs expreince it has been enhanced by some packages as well as custom configuration and what I consider to be better defaults. Anything and everything in this configuration is optional. Feel free to change anything you like, add new things, or anything else that would suit your specific workflow. This project relies extensively on  [[https://github.com/jwiegley/use-package][use-package]]. It provides a neat and tidy way for all the package specific configuration to go. If you want to add or change anything specific about the configuration you just have to find where the use-package deceleration is. It will look something like
+This is not a vanilla Emacs experience it has been enhanced by some packages as well as custom configuration and what I consider to be better defaults. Anything and everything in this configuration is optional. Feel free to change anything you like, add new things, or anything else that would suit your specific workflow. This project relies extensively on  [[https://github.com/jwiegley/use-package][use-package]]. It provides a neat and tidy way for all the package specific configuration to go. If you want to add or change anything specific about the configuration you just have to find where the use-package deceleration is. It will look something like
 #+begin_src emacs-lisp
 (use-package org-roam
   :ensure t
@@ -29,6 +29,8 @@ This is not my personal emacs configuration. It is meant to be a template others
   - 
 - Line wrapping automatically enabled for org files
 - Flyspell automatically enabled for org files
+*** What this is not
+This is *not* a front end for Obsidian notes, if having a fronted sounds interesting to you please check out [[https://github.com/licht1stein/obsidian.el#how-does-obsidianel-work][obsidian-el]]. It is fantastic and really migth do what some users want better then this project will. This project is more like a Segway for people who want to move fully off Obsidian notes and to Emacs. I think org-roam, and Emacs offers a level of customization and depth that few pieces of software match. This is not a front-end rather a way to ease into Emacs with a familiar setup. 
 ** Packages
 *** Org Mode
 This is one of emacs most defining features. There is a great many features that in org mode it would be impossible to cover here. It has a lot of features it can be found here at their [[https://orgmode.org/][website]]. I also really recommend System Crafter's youtube [[https://www.youtube.com/watch?v=VcgjTEa0kU4&t=734s][video]] about org mode. He is super helpful and was one of the reasons I was able to get into Emacs at all. 
@@ -36,7 +38,9 @@ This is one of emacs most defining features. There is a great many features that
 The crown jewel, this is the program that is going to make emacs more like Obsidian. This is the package that is going to give up the linking between notes. I have added a few key binds to make this a little easier for new people. C-c n i, will insert a link onto the page. This will link the file. To be honest I have been using org-roam for such a small time it is difficult for me to guide new users. I high recommend looking at there [[https://www.orgroam.com/manual.html][documentation]] as with most things emacs it is very well documented. The only real change to the configuration of org-roam is that I decided to stop org-roam from inserting the date in front of your filename. In my opinion it looks bad and is unnecessary. This can of course always be disabled by commenting or deleting the :config section in use-package for org-roam.
 *** Treemacs
 [[https://github.com/Alexander-Miller/treemacs][TreeMacs]] is meant to provide the file-tree on the left hand side. This project is idea because it adds mouse support. This is important to new users who aren't yet ready to move to a to a total key bind interface. This project is mainly for product management, however it will perfect for this role
-** TODO
+*** Markdown
+For previously existing markdown files markdown mode is going to be installed. Markdown is not as feature rich as org. I suggest switching from markdown to org. You can even convert your previous markdown files into org with [[https://pandoc.org/][Pandoc]].
+** TO-DO
 - [x ] Org-Roam
   - Provides the note linking
 - [ ] Org-Roam-Graph?
@@ -44,7 +48,7 @@ The crown jewel, this is the program that is going to make emacs more like Obsid
   - Might make optimal looks like a beast to configure
 - [x] Tree-view
   - Need a file tree
-- [ ] Markdown
+- [x] Markdown
   - Allow for the user to use markdown
 - [ ] Better-Bullets
   - More bullet points

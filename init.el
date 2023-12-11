@@ -1,6 +1,6 @@
 ;; Welcome to the init.el of Obsidian-Roam
-;; The goal of this project is to create a obsidian-esque exprience inside emacs
-;; I will be using as few packages as possible
+
+;;Installing use-package
 (require 'package)
 (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -17,7 +17,7 @@
 ;; Stop the original startup screen 
 (setq inhibit-startup-screen t)
 
-;; Packages 
+;; Package install and configuration
 ;; ------------------------------------------------------------------------------------------------------------
 
 ;; The Star of the show. Org and Org-Roam 
@@ -170,9 +170,11 @@
 
 ;; Adding obsidian colors to the headings
 (custom-set-faces
-  '(markdown-header-face-1 ((t (:foreground "blue")))) ; Change 'blue' to your desired color
-  '(markdown-header-face-2 ((t (:foreground "green")))) ; Change 'green' to your desired color
-  ;; Add more lines for other levels if needed
+  '(markdown-header-face-1 ((t (:foreground "blue")))) 
+  '(markdown-header-face-2 ((t (:foreground "green")))) 
+  '(markdown-header-face-3 ((t (:foreground "orange"))))
+  '(markdown-header-face-4 ((t (:foreground "yellow"))))
+  '(markdown-header-face-5 ((t (:foreground "purple"))))
   )
 
 ;;-------------------------------------------------------------------------------------------------------------
