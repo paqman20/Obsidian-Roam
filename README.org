@@ -53,7 +53,7 @@ For previously existing markdown files markdown mode is going to be installed. M
 - [ ] Better-Bullets
   - More bullet points
 - [ ] Obsidan-esque default theme
-- [ ] Flyspell
+- [x ] Flyspell
   - Spellcheck 
   
 

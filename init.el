@@ -179,10 +179,21 @@
 
 ;;-------------------------------------------------------------------------------------------------------------
 
+;; Default Behaviors
+;;-------------------------------------------------------------------------------------------------------------
 ;; This may be very controversial for people who use emacs on a daily but I am choosing to leave the menu bar there.
 ;; Many people including myself prefer to turn these off. Feel free to uncomment the lines bellow if you want them disabled
 ;; (menu-bar-mode -1) 
 (tool-bar-mode -1) 
 (scroll-bar-mode -1)
 
-;;
+;; Turn on visual line wrapping and fylspell in ALL org-mode files
+(add-hook 'org-mode-hook 'turn-on-flyspell)
+(add-hook 'org-mode-hook 'turn-on-visual-line-mode)
+;; Turn on visual line wrapping and fylspell in ALL markdown-mode files
+(add-hook 'markdown-mode-hook 'turn-on-flyspell)
+(add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
+
+
+
+
